@@ -3,6 +3,7 @@ import consumer from "./consumer"
 consumer.subscriptions.create("ProgressChannel", {
   connected() {
     // Called when the subscription is ready for use on the server
+    console.log('connected')
   },
 
   disconnected() {
@@ -11,5 +12,6 @@ consumer.subscriptions.create("ProgressChannel", {
 
   received(data) {
     // Called when there's incoming data on the websocket for this channel
+    console.log(data)
   }
 });

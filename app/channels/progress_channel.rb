@@ -1,6 +1,6 @@
 class ProgressChannel < ApplicationCable::Channel
   def subscribed
-    # stream_from "some_channel"
+    stream_from "progress_#{params[:id]}" if params[:id]
   end
 
   def unsubscribed
