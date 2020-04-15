@@ -3,5 +3,6 @@ class ProgressIncrementJob < ApplicationJob
 
   def perform(*args)
     # Do something later
+    sleep 10
   end
 end
